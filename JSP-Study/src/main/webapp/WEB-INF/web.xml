@@ -77,5 +77,42 @@
  <servlet-mapping>
   	<servlet-name>HRDKR</servlet-name>
   	<url-pattern>/Korail</url-pattern>
-  </servlet-mapping>
+ </servlet-mapping>
+ 
+ <!--데이터베이스 연동을 더 쉽게 처리하기위해 XML을 사용합니다. -->
+ <context-param>
+	<param-name>OracleCloud</param-name>
+	<param-value>oracle.jdbc.OracleDriver</param-value>	
+ </context-param> 
+ <context-param>
+	<param-name>OCURL</param-name>
+	<param-value>jdbc:oracle:thin:@oracledatabase_medium?TNS_ADMIN=/Users/parkhyeongju/Downloads/Wallet_OracleDataBase</param-value>	
+ </context-param> 
+ <context-param>
+	<param-name>OCID</param-name>
+	<param-value>ADMIN</param-value>	
+ </context-param> 
+ <context-param>
+	<param-name>OCPWD</param-name>
+	<param-value>database616125Os!</param-value>	
+  </context-param> 
+
+<!-- 윈도우 로컬개발환경 -->
+<context-param>
+	<param-name>SQLP</param-name>
+	<param-value>oracle.jdbc.OracleDriver</param-value>	
+ </context-param> 
+ <context-param>
+	<param-name>SQLPURL</param-name>
+	<param-value>jdbc:oracle:thin:@//180.68.32.70:1521/xe</param-value>	
+ </context-param> 
+ <context-param>
+	<param-name>SQPID</param-name>
+	<param-value>SYSTEM</param-value>	
+ </context-param> 
+ <context-param>
+	<param-name>SQPPWD</param-name>
+	<param-value>1234</param-value>	
+  </context-param> 
+  
 </web-app>
