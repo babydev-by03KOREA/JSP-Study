@@ -11,13 +11,13 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+	
 	}
 	h2 {
 		text-align: center;
 	}
 </style>
 </head>
-<body>
 	<%
 		Cookie[] cookies = request.getCookies();
 		System.out.println("Cookies : " + cookies);
@@ -25,13 +25,13 @@
 		if(cookies != null){
 			for(Cookie c : cookies){
 				if(c.getName().equals("UserID")){
-					response.sendRedirect("LoginPro.jsp");
+					response.sendRedirect("./LoginPro.jsp");
 				}
 			}
 		}
 	%>
 	<h2><b>로그인하고 할인받으세요!</b></h2><br/>
-	<form action="LoginPro" method="post">
+	<form action="<%=request.getContextPath() %>/LoginPro" method="post">
 		<table>
 			<tr>
 				<td>ID </td>

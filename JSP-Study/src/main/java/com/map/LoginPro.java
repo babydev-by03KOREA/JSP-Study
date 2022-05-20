@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/LoginPro")
 public class LoginPro extends HttpServlet {
        
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		String UID = request.getParameter("UID");
@@ -31,7 +33,7 @@ public class LoginPro extends HttpServlet {
 	 		b에서 차례대로 꺼내서 꺼낼값이 더이상 없을때까지 a에다가 집어넣음
 		 */
 		for(Cookie c : cookies) {
-			System.out.println("Cookie정보 : " + c.getName() + c.getValue());
+			System.out.println("Cookie정보 : " + c.getName() + "Cookie값 : " + c.getValue());
 			
 			if(c.getName().equals("UserID")) {
 				cookie = c;
@@ -46,7 +48,7 @@ public class LoginPro extends HttpServlet {
 		response.addCookie(cookie);
 		cookie.setMaxAge(60*60);
 		
-		response.sendRedirect("Cookie/LoginPro.jsp");
+		response.sendRedirect("UserValues/LoginPro.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

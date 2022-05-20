@@ -9,6 +9,7 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
   <context-param>
   	<param-name>INIT_PARAM</param-name>
   	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
@@ -37,26 +38,32 @@
   	<param-value>180.68.32.70</param-value>
   </context-param>
   
-  <servlet>
-  	<servlet-name>Inflearn</servlet-name>
+  <context-param>
+  	<param-name>adminID</param-name>
+  	<param-value>hyeongju1122</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>adminPW</param-name>
+  	<param-value>22017048</param-value>
+  </context-param>
+  
+<!--   <servlet>
+  <servlet-name>JSP</servlet-name>
   	<jsp-file>/index.jsp</jsp-file>
+	<init-param>
+		<param-name>adminID</param-name>
+		<param-value>root</param-value> 
+	</init-param>
   	<init-param>
-  		<param-name>adminID</param-name>
-  		<param-value>hyeongju</param-value>
+		 <param-name>adminPW</param-name>
+		 <param-value>database</param-value> 
   	</init-param>
-  	<init-param>
-  		<param-name>adminPW</param-name>
-  		<param-value>database</param-value>
-  	</init-param>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Inflearn</servlet-name>
-  	<url-pattern>/index.jsp</url-pattern>
-  </servlet-mapping>
+  </servlet> -->
   
   <servlet>
   	<servlet-name>HRDKR</servlet-name>
-  	<servlet-class>com.map.Mapping</servlet-class>
+  	<servlet-class>com.map.Mpg</servlet-class>
   	<init-param>
   		<param-name>adminID</param-name>
   		<param-value>root</param-value>
@@ -67,7 +74,7 @@
   	</init-param>
   </servlet>
   
-  <servlet-mapping>
+ <servlet-mapping>
   	<servlet-name>HRDKR</servlet-name>
   	<url-pattern>/Korail</url-pattern>
   </servlet-mapping>
