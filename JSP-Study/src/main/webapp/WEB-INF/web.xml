@@ -115,4 +115,10 @@
 	<param-value>1234</param-value>	
   </context-param> 
   
+  <!-- 세션 유지시간 설정 -->
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  	<!-- xml doc.에서는 분 단위로 설정가능 -->
+  </session-config>
+  
 </web-app>
