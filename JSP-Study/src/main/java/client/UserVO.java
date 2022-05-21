@@ -1,28 +1,55 @@
 package client;
 
 public class UserVO {
+	private String uid;
+	private String pwd;
 	private String name;
-	// private 맴버 변수 (규약No.2)
-	private int code;
-	// private 맴버 변수 (규약No.2)
-	public UserVO() {}
-	// 기본 생성자가 있어야합니다. (규약No.3)
+	private String gender;
+	private String email;
+	private String address;
+	private String aggrement;
+	
+	public String getId() {
+		return uid;
+	}
+	public void setId(String uid) {
+		this.uid = uid;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getCode() {
-		return code;
+	public String getGender() {
+		return gender;
 	}
-	public void setCode(int code) {
-		this.code = code;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public UserVO(String name, int code) {
-		super();
-		this.name = name;
-		this.code = code;
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getAggrement() {
+		return aggrement;
+	}
+	public void setAggrement(String aggrement) {
+		this.aggrement = aggrement;
 	}
 	
 }
